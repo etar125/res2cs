@@ -28,7 +28,7 @@ namespace res2cs {
             string b;
             string tmp;
             foreach (string a in code) {
-                b = a.TrimStart(TrimChars).ToLower();
+                b = a.TrimStart(TrimChars);
                 // vvv Взято из ReScript
                 if (b[0] != '_') b = b.Substring(0, 1).ToUpper() + b.Substring(1);
                 else b = "_" + b.Substring(1, 1).ToUpper() + b.Substring(2);

@@ -36,10 +36,10 @@ namespace res2cs {
                 // Команды для Hello, World
                 // потом уберу этот комментарий
                 if (b.StartsWith("Printline")) {
-                    tmp = b.Substring(9);
+                    tmp = b.Substring(10);
                     res.Add("\t\t\tConsole.WriteLine(" + ConvertS(tmp) + ");");
                 } else if (b.StartsWith("Pause")) {
-                    tmp = b.Substring(5);
+                    tmp = b.Substring(6);
                     res.Add("\t\t\tConsole.ReadKey(true);");
                 }
             }

@@ -8,11 +8,11 @@ namespace res2cs {
             string[] ofas2 = src.Split(new string[] { "&&&", "&^&" }, StringSplitOptions.None);
             string result = "";
             for (int s = 0; s < ofas2.Length; s++) {
-                if (ofas2[s].StartsWith("$")) result += ofas2[s].Remove(0, 1) + " +";
-                else if (ofas2[s].StartsWith("/$")) result += "\"" + ofas2[s].Remove(0, 1) + "\" +";
-                else result += "\"" + ofas2[s] + "\" +";
+                if (ofas2[s].StartsWith("$")) result += ofas2[s].Remove(0, 1) + " + ";
+                else if (ofas2[s].StartsWith("/$")) result += "\"" + ofas2[s].Remove(0, 1) + "\" + ";
+                else result += "\"" + ofas2[s] + "\" + ";
             }
-            if (result.EndsWith(" +")) result.Remove(result.Length - 3);
+            if (result.EndsWith(" + ")) result = result.Remove(result.Length - 3);
             return result;
         }
 

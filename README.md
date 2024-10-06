@@ -1,2 +1,2 @@
-# res2cs
-ReScript to C# converter
+# ReScript to C# converter
+Это библиотека для конвертирования кода ReScript в код C#.

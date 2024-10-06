@@ -27,7 +27,7 @@ namespace res2cs {
             };
             string b;
             string tmp;
-            foreach(string a in code) {
+            foreach (string a in code) {
                 b = a.TrimStart(TrimChars).ToLower();
                 // vvv Взято из ReScript
                 if (b[0] != '_') b = b.Substring(0, 1).ToUpper() + b.Substring(1);
@@ -35,7 +35,7 @@ namespace res2cs {
 
                 // Команды для Hello, World
                 // потом уберу этот комментарий
-                if(b.StartsWith("Printline")) {
+                if (b.StartsWith("Printline")) {
                     tmp = b.Substring(9);
                     res.Add("\t\t\tConsole.WriteLine(" + ConvertS(tmp) + ");");
                 } else if (b.StartsWith("Pause")) {

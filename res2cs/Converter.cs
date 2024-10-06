@@ -38,10 +38,7 @@ namespace res2cs {
                 if (b.StartsWith("Printline")) {
                     tmp = b.Substring(10);
                     res.Add("\t\t\tConsole.WriteLine(" + ConvertS(tmp) + ");");
-                } else if (b.StartsWith("Pause")) {
-                    tmp = b.Substring(6);
-                    res.Add("\t\t\tConsole.ReadKey(true);");
-                }
+                } else if (b.StartsWith("Pause")) res.Add("\t\t\tConsole.ReadKey(true);");
             }
 
             res.AddRange(new List<string> {
